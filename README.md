@@ -15,5 +15,5 @@ final jsonResponse = await network.getRequest(request);
 final AlbumModel album = AlbumModel.fromJson(jsonResponse);
 ```
 
-[PlatformDetail]: https://github.com/vicajilau/network_service/blob/master/lib/src/platform_detail.dart
-[PlatformDetail]: https://github.com/vicajilau/network_service/blob/master/lib/src/platform_detail.dart
+[NetworkService]: https://github.com/vicajilau/network_service/blob/master/lib/src/network_service.dart
+[UrlRequest]: https://github.com/vicajilau/network_service/blob/master/lib/src/url_request.dart

@@ -1,7 +1,7 @@
 name: network_service
 description: A new Flutter project.
 version: 0.0.1
-homepage:
+homepage: ttps://github.com/vicajilau/network_service
 
 environment:
   sdk: ">=2.17.1 <3.0.0"
@@ -11,8 +11,6 @@ dependencies:
   flutter:
     sdk: flutter
   http: ^0.13.4
-  mockito: ^5.2.0
-  build_runner: ^2.1.11
 
 dev_dependencies:
   flutter_test:

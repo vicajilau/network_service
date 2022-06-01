@@ -5,15 +5,9 @@ import 'package:network_service/src/url_request.dart';
 
 class NetworkService {
 
-  http.Client? _client;
-
-  void setClient(http.Client client) => _client = client;
-
-  http.Client _getClient() => _client ?? http.Client();
-
   /// Sends an HTTP GET request with the [UrlRequest] object waiting for a 200 status code.
   Future<dynamic> getRequest(UrlRequest request) async {
-    final response = await _getClient().get(request.url, headers: request.headers);
+    final response = await http.get(request.url, headers: request.headers);
 
     if (response.statusCode == 200) {
       try {
@@ -28,7 +22,7 @@ class NetworkService {
 
   /// Sends an HTTP POST request with the [UrlRequest] object waiting for a 200, 202 or 204 status code.
   Future<dynamic> postRequest(UrlRequest request) async {
-    final response = await _getClient().post(request.url, headers: request.headers, body: request.body, encoding: request.encoding);
+    final response = await http.post(request.url, headers: request.headers, body: request.body, encoding: request.encoding);
 
     if (response.statusCode == 200) {
       try {
@@ -43,7 +37,7 @@ class NetworkService {
 
   /// Sends an HTTP PUT request with the [UrlRequest] object waiting for a 200, 202 or 204 status code.
   Future<dynamic> putRequest(UrlRequest request) async {
-    final response = await _getClient().put(request.url, headers: request.headers, body: request.body, encoding: request.encoding );
+    final response = await http.put(request.url, headers: request.headers, body: request.body, encoding: request.encoding );
 
     if (response.statusCode == 200 || response.statusCode == 204) {
       try {
@@ -58,7 +52,7 @@ class NetworkService {
 
   /// Sends an HTTP DELETE request with the [UrlRequest] object waiting for a 200, 202 or 204 status code.
   Future<dynamic> deleteRequest(UrlRequest request) async {
-    final response = await _getClient().delete(request.url, headers: request.headers, body: request.body, encoding: request.encoding);
+    final response = await http.delete(request.url, headers: request.headers, body: request.body, encoding: request.encoding);
 
     if (response.statusCode == 200 || response.statusCode == 202 || response.statusCode == 204) {
       try {
