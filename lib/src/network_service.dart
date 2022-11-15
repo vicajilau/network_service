@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import 'package:network_service/src/url_request.dart';
+import 'package:network_wrapper/src/url_request.dart';
 
 class NetworkService {
   /// Sends an HTTP GET request with the [UrlRequest] object waiting for a 200 status code.

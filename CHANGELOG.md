@@ -1,4 +1,4 @@
-## 1.0.2
+## 1.0.3
 * Modified project structure.
 
 ## 1.0.1

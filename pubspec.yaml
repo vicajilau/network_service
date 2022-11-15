@@ -1,6 +1,6 @@
-name: network_service
+name: network_wrapper
 description: A wrapper for network requests.
-version: 1.0.2
+version: 1.0.3
 homepage: https://github.com/vicajilau/network_service
 
 environment:
@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  http: ^0.13.4
+  http: ^0.13.5
 
 dev_dependencies:
   flutter_test:
