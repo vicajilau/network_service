@@ -1,3 +1,6 @@
+## 1.0.2
+* Modified project structure.
+
 ## 1.0.1
 * Added License.
 
