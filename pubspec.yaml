@@ -1,6 +1,6 @@
 name: network_service
 description: A wrapper for network requests.
-version: 1.0.0
+version: 1.0.1
 homepage: ttps://github.com/vicajilau/network_service
 
 environment:
