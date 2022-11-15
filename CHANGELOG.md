@@ -1,3 +1,6 @@
+## 1.0.0
+* Multipart methods added.
+
 ## 0.0.1
 
-* TODO: Describe initial release.
+* Added GET, POST, DEL and PUT methods.
