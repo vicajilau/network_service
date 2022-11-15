@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:network_wrapper/src/url_request.dart';
 
-class NetworkService {
+class NetworkWrapper {
   /// Sends an HTTP GET request with the [UrlRequest] object waiting for a 200 status code.
   Future<dynamic> getRequest(UrlRequest request) async {
     final response = await http.get(request.url, headers: request.headers);
