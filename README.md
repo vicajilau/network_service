@@ -6,7 +6,7 @@ The easiest way to use this library is to call the [NetworkService][] class as f
 This requires an object of type [UrlRequest][] to be passed with everything passed as a parameter. 
 
 ```dart
-import 'package:network_service/network_service.dart';
+import 'package:network_service/network_wrapper.dart';
 
 final network = NetworkService();
 
@@ -18,7 +18,7 @@ final AlbumModel album = AlbumModel.fromJson(jsonResponse);
 If you want to use a Multipart Request
 
 ```dart
-import 'package:network_service/network_service.dart';
+import 'package:network_service/network_wrapper.dart';
 
 final network = NetworkService();
 
