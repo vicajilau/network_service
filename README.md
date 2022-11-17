@@ -41,7 +41,7 @@ final jsonResponse = await network.multipartRequest(request);
 final ResponseModel model = ResponseModel.fromJson(jsonResponse);
 ```
 
-[NetworkService]: https://github.com/vicajilau/network_service/blob/master/lib/src/network_wrapper.dart
+[NetworkWrapper]: https://github.com/vicajilau/network_service/blob/master/lib/src/network_wrapper.dart
 [UrlRequest]: https://github.com/vicajilau/network_service/blob/master/lib/src/url_request.dart
 [MultipartUrlRequest]: https://github.com/vicajilau/network_service/blob/master/lib/src/multipart_url_request.dart
 [MethodRequest]: https://github.com/vicajilau/network_service/blob/master/lib/src/method_request.dart
