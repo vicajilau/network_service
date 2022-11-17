@@ -1,3 +1,7 @@
+## 1.0.4
+* Improve the readme.
+* Refactor folders.
+
 ## 1.0.3
 * Modified project structure.
 

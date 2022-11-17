@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:network_wrapper/src/url_request.dart';
 
+import 'multipart_url_request.dart';
+
 class NetworkWrapper {
   /// Sends an HTTP GET request with the [UrlRequest] object waiting for a 200 status code.
   Future<dynamic> getRequest(UrlRequest request) async {
@@ -76,7 +78,7 @@ class NetworkWrapper {
   }
 
   /// Sends an HTTP Multipart request with the [UrlRequest] object waiting for a 200 status code.
-  Future<dynamic> multipartRequest(MultiPartUrlRequest request) async {
+  Future<dynamic> multipartRequest(MultipartUrlRequest request) async {
     final multipartRequest =
         http.MultipartRequest(request.method.name, request.url);
     request.fieldsMultipart?.forEach((key, value) {

@@ -15,7 +15,8 @@ final jsonResponse = await network.getRequest(request);
 final AlbumModel album = AlbumModel.fromJson(jsonResponse);
 ```
 
-If you want to use a Multipart Request
+If you want to build a multipart request you must use [MultipartUrlRequest][] passing a object [MethodRequest][] with 
+the request type, as well as the files and parameters as the following maps:
 
 ```dart
 import 'package:network_wrapper/network_wrapper.dart';
@@ -29,16 +30,18 @@ Map<String, String> _filesMultipartRequest(File image) {
 Map<String, dynamic> _fieldsMultipartRequest(
     String userIdentifier, String tenantIdentifier) {
   return <String, dynamic>{
-    "user_id": userIdentifier,
-    "tenant_id": tenantIdentifier
+    "_id": _userId,
+    "_name": _userName
   };
 }
 
-final request = MultipartRequest.fromStringUrl('https://jsonplaceholder.typicode.com/posts/1',
+final request = MultipartUrlRequest.fromStringUrl('https://jsonplaceholder.typicode.com/posts/1',
     MethodRequest.POST, filesMultipart: _filesMultipartRequest, fieldsMultipart: _fieldsMultipartRequest);
 final jsonResponse = await network.multipartRequest(request);
 final ResponseModel model = ResponseModel.fromJson(jsonResponse);
 ```
 
-[NetworkService]: https://github.com/vicajilau/network_service/blob/master/lib/src/network_service.dart
+[NetworkService]: https://github.com/vicajilau/network_service/blob/master/lib/src/network_wrapper.dart
 [UrlRequest]: https://github.com/vicajilau/network_service/blob/master/lib/src/url_request.dart
+[MultipartUrlRequest]: https://github.com/vicajilau/network_service/blob/master/lib/src/multipart_url_request.dart
+[MethodRequest]: https://github.com/vicajilau/network_service/blob/master/lib/src/method_request.dart
