@@ -1,3 +1,6 @@
+## 1.0.5
+* Improve the readme.
+
 ## 1.0.4
 * Improve the readme.
 * Refactor folders.
