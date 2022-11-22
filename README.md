@@ -1,3 +1,7 @@
+# Network Wrapper
+
+[![pub package](https://img.shields.io/pub/v/sqflite.svg)](https://pub.dev/packages/network_wrapper)
+
 Package that encapsulates the network service in a separate module independent of the application.
 
 ## Using
