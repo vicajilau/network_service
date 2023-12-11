@@ -1,1 +1,1 @@
-enum MethodRequest { POST, GET, PUT, DEL }
+enum MethodRequest { post, get, put, del }
